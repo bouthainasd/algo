@@ -1,0 +1,39 @@
+ALGORITHM cercule-length
+VAR
+    len: INTEGER;
+    word:STRING;
+     word:=""
+    len:=0;
+    i, j , y:INTEGER
+    nwords:INTEGER:=0
+    voy:INTEGER:=0
+    
+BEGIN
+  i:=1;
+ WHILE (word[i] <> ".") DO
+        i:=i+1
+       len:=i
+ END_WHILE
+ write(len);
+
+ //2eme partie
+
+ FOR j FROM 1 TO len STEP 1  DO
+  IF (word[j]=" ") THEN
+   nwords:= nwords+1;
+  END_IF
+ END_FOR
+ write(nwords);
+
+ // 3eme partie
+ FOR z FROM 1 TO len STEP 1  DO
+  IF (word[z] in [a,A , e , E ,i ,I ,o ,O ,u , U , y ,Y]) THEN
+    voy:=voy+1
+  END_IF
+  write(voy);
+ END_FOR
+
+
+END
+
+
